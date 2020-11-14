@@ -19,15 +19,18 @@ public class NumberCounter {
         System.out.print("Search for number: ");
         int number = input.nextInt();
 
-        int numberOccurrences = countNumberOccurrences(number, numbers); 
+        int numberOccurrences = countNumberOccurrences(number, numbers); //Call the method
 
         System.out.println("Number occurrences: " + numberOccurrences);
     }
 
     public static int countNumberOccurrences(int number, int[] numbers) {
         int count = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] == number) count++;
-        }return 0;
+        for (int j : numbers) {
+            if (number == j) {
+                count++;
+            }
+        }
+        return count;
     }
 }
