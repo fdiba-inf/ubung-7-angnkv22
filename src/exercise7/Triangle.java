@@ -8,21 +8,28 @@ public class Triangle {
 
         System.out.print("Enter n: ");
         int n = input.nextInt();
+        System.out.println();
+
         for (int line = 1; line <= n; line++) {
             printLine(1, line);
         }
-        for (int line = n - 1; line > 0; line--) {
-            printLine(1, line);
-        }
 
-        public static void printLine (int start, int end){
-            for (int i = start; i <= end; i++) {
-                if (i == end) {
-                    System.out.println(i);
-                } else {
-                    System.out.println(i + "");
-                }
-            }
+        for (int unter = n - 1; unter > 0; unter--) {
+            printLine(n - 1, unter);
         }
     }
+
+    public static void printLine(int start, int end) {
+        String spaces = " ";
+        for (start = 1; start <= end; start++) {
+            if (start == end) {
+                System.out.print(start);
+            } else {
+                spaces = " ";
+                System.out.print(start + spaces);
+            }
+        }
+        System.out.println();
+    }
+
 }
